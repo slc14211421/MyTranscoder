@@ -1,0 +1,2 @@
+# MyTranscoder
+myTranscoder 是使用Python Django 封装了ffmpeg的流媒体视频文件的转码能力，以HTTP/JSON API的方式对外提供视频转码和合并能力
