@@ -1,0 +1,8 @@
+#!/bin/sh
+datestr=`date +'%Y%m%d'`
+num=`cat log/myTranscoder.log|wc -l`
+if [ $num -gt 50000 ];then
+	mv log/myTranscoder.log log/myTranscoder.$datestr.log
+fi
+
+nohup python manage.py runserver 0.0.0.0:8095 >> log/myTranscoder.log 2>&1 &
